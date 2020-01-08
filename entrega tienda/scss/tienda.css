@@ -1,0 +1,462 @@
+/* Define standard variables and values for website */
+@import url(https://fonts.googleapis.com/css?family=Sigmar+One);
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+body {
+  background-color: white;
+  color: darkblue;
+  font-size: 18px;
+}
+
+html, body {
+  margin: auto;
+}
+
+.navbar-brand {
+  font-family: 'Pacifico';
+  font-size: 30px;
+  float: left;
+  color: white;
+}
+
+nav {
+  width: 100%;
+  padding: 10px 0 60px 0;
+  background: #1f7997;
+  font-size: 16px;
+  color: white;
+}
+
+nav .navbar-left {
+  float: left;
+}
+
+nav .navbar-right {
+  float: right;
+}
+
+nav ul li {
+  display: inline;
+  padding-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: black;
+}
+
+.container {
+  margin: auto;
+  width: 80%;
+}
+
+.main.header {
+  font-family: "Sigmar One";
+  font-size: 30px;
+  text-align: center;
+}
+
+.main.body {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: 10fr auto 20fr;
+      grid-template-rows: 10fr auto 20fr;
+      grid-template-areas: "head" "body" "foot";
+}
+
+.product.body {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: auto 20%;
+      grid-template-rows: auto 20%;
+      grid-template-areas: "bodyp" "footp";
+}
+
+.main.explanation {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: head;
+}
+
+.main.explanation p {
+  text-align: center;
+}
+
+.main.central {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: body;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% auto 20%;
+      grid-template-columns: 20% auto 20%;
+  -ms-grid-rows: 10% 5% 40% 5% 40%;
+      grid-template-rows: 10% 5% 40% 5% 40%;
+      grid-template-areas: "highlights highlights highlights" "headerrebajasleft headerrebajas headerrebajasright" "rebajasleft rebajas rebajasright" "headerentrenosleft headerentrenos headerentrenosright" "estrenosleft estrenos estrenosright";
+  row-gap: 10px;
+  margin-bottom: 80px;
+}
+
+.product-central {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: bodyp;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.product.explanation {
+  width: 50%;
+  height: 100%;
+  padding: 30px;
+}
+
+.product.explanation .title {
+  font-size: 30px;
+  font-family: "Sigmar One";
+}
+
+.product.explanation .field {
+  font-style: bold;
+  font-size: 20px;
+}
+
+.product.explanation .fecha {
+  font-style: italic;
+}
+
+.product.explanation .stock {
+  color: green;
+}
+
+.product.buttons {
+  width: 100%;
+  padding-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.product.buttons .add {
+  width: auto;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #a4e271;
+          box-shadow: inset 0px 1px 0px 0px #a4e271;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #89c403), to(#77a809));
+  background: linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+  background-color: #89c403;
+  border-radius: 6px;
+  border: 1px solid #74b807;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 24px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #528009;
+}
+
+.product.info {
+  width: 100%;
+  height: 80vh;
+  border: darkblue 5px solid;
+  border-radius: 25px;
+  margin: 20px;
+  padding: 10px;
+}
+
+.product.info .list-head {
+  font-size: 30px;
+  font-family: "Sigmar One";
+}
+
+.product.info .title {
+  font-size: 30px;
+  font-family: "Sigmar One";
+}
+
+.product.info .extra-img {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: gray;
+}
+
+.product.info .extra-img figure {
+  width: 300px;
+  text-align: center;
+}
+
+.section-bar {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: highlights;
+  width: 100%;
+  background-color: lightblue;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section-bar .section-button {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  color: darkblue;
+  text-align: center;
+}
+
+.section-bar .section-button:hover {
+  color: white;
+}
+
+.rebajas-header {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: headerrebajas;
+  text-align: center;
+  color: white;
+  font-family: 'Sigmar One';
+  font-size: 18px;
+  background-color: blue;
+  width: 100%;
+  height: 100%;
+}
+
+.estrenos-header {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: headerentrenos;
+  text-align: center;
+  color: white;
+  font-family: 'Sigmar One';
+  font-size: 18px;
+  background-color: blue;
+  width: 100%;
+  height: 100%;
+}
+
+.main.footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: foot;
+  background-color: #000000;
+  color: lightblue;
+}
+
+.main.footer p {
+  margin-left: 50px;
+}
+
+.product.footer {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: footp;
+  background-color: #000000;
+  color: lightblue;
+}
+
+.product.footer p {
+  margin-left: 50px;
+}
+
+#scrollbar::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+#scrollbar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+#scrollbar::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border: 2px solid #555555;
+}
+
+.product.preview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 40%;
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  border-style: inset;
+  margin: 20px;
+}
+
+.rebajas.preview {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: rebajas;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 100vh;
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  border-style: inset;
+}
+
+.estrenos.preview {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: estrenos;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 100vh;
+  height: 100%;
+  overflow-x: scroll;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  border-style: inset;
+}
+
+.preview.child {
+  min-width: 100%;
+  scroll-snap-align: start;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.preview.child img {
+  max-height: 50%;
+  max-width: 60%;
+  vertical-align: middle;
+}
+
+.product.child {
+  min-width: 100%;
+  scroll-snap-align: start;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.product.child img {
+  max-height: 50%;
+  max-width: 60%;
+  vertical-align: middle;
+}
+
+#part1, #part2, #part3 {
+  background-color: white;
+  max-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+#part1 .imagen.rebaja, #part2 .imagen.rebaja, #part3 .imagen.rebaja {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+#part1 .imagen.rebaja figcaption, #part2 .imagen.rebaja figcaption, #part3 .imagen.rebaja figcaption {
+  font-family: 'Sigmar One';
+  font-size: 20px;
+  text-align: center;
+}
+
+#part1 .imagen.rebaja figcaption img, #part2 .imagen.rebaja figcaption img, #part3 .imagen.rebaja figcaption img {
+  min-height: 100%;
+  vertical-align: middle;
+}
+
+.mosaic-central {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: body;
+  height: 200vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 20% 20% 20% 20% 20%;
+      grid-template-rows: 20% 20% 20% 20% 20%;
+  -ms-grid-columns: 25% 25% 25% 25%;
+      grid-template-columns: 25% 25% 25% 25%;
+  background-color: gray;
+}
+
+.mosaic-item {
+  background-color: lightblue;
+  color: #fff;
+  padding: 10px;
+  margin: 10px;
+  border: darkblue solid 5px;
+  border-radius: 25px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.mosaic-item figure {
+  text-align: center;
+  vertical-align: middle;
+  max-height: 200px;
+}
+
+.mosaic-item figure img {
+  vertical-align: middle;
+  width: 200px;
+  height: 95%;
+}
+/*# sourceMappingURL=tienda.css.map */

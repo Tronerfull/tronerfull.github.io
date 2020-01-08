@@ -1,0 +1,504 @@
+/* Define standard variables and values for website */
+$bgcolor3: gray;
+$bgcolor2: lightblue;
+$bgcolor: white;
+$highcolor: rgb(31, 121, 151);
+$textcolor: darkblue;
+$fontsize: 18px;
+$fontsizeheader: 30px;
+$fontsizeheader2: 18px;
+$fontsizehighlight: 20px;
+$fontstyle1:  'Sigmar One';
+
+//import fonts
+@import url(https://fonts.googleapis.com/css?family=Sigmar+One);
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+
+body {
+  background-color: $bgcolor;
+  color: $textcolor;
+  font-size: $fontsize;
+}
+
+//common
+html,body{
+   
+
+    margin: auto;
+    //overflow:hidden;
+}
+
+//barra de navegacion
+
+//brand
+.navbar-brand
+{
+    font-family: 'Pacifico';
+    font-size: $fontsizeheader; 
+    float: left;
+    color: $bgcolor;
+}
+
+//botones
+nav {
+ 
+    width: 100%;
+    padding: 10px 0 60px 0;
+    background: $highcolor;
+    font-size: 16px;
+    color: $bgcolor;
+    
+    .navbar-left {
+      float: left;
+    }
+    
+    .navbar-right {
+      float: right;
+    }
+    ul {
+      
+      li {
+        display: inline;
+        padding-left: 20px;
+        a {
+          color: $bgcolor;
+          text-decoration: none;
+          
+          &:hover {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+  
+  .container {
+    margin: auto;
+    width: 80%;
+  }
+
+  //header
+  .main.header{
+    font-family: $fontstyle1;
+    font-size: $fontsizeheader; 
+    text-align: center;
+  }
+
+  
+
+//grid comun
+  .main.body{
+    
+    height: 100%;
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: 10fr auto 20fr;
+    grid-template-areas: 
+    "head"
+    "body"
+    "foot";
+
+  
+}
+
+.product.body{
+    
+  height: 100%;
+  display:grid;
+  grid-template-columns: auto;
+  grid-template-rows:  auto 20%;
+  grid-template-areas: 
+  "bodyp"
+  "footp";
+}
+
+
+.main.explanation{
+    grid-area: head;
+
+    p{
+      text-align: center;
+    }
+}
+
+.main.central{
+    grid-area: body;
+
+    display:grid;
+    grid-template-columns: 20% auto 20%;
+    grid-template-rows: 10% 5% 40% 5% 40%;
+    grid-template-areas: 
+    "highlights highlights highlights"
+    "headerrebajasleft headerrebajas headerrebajasright"
+    "rebajasleft rebajas rebajasright"
+    "headerentrenosleft headerentrenos headerentrenosright"
+    "estrenosleft estrenos estrenosright";
+
+    row-gap: 10px;
+
+    margin-bottom: 80px;
+}
+
+
+.product-central{
+  grid-area: bodyp;
+
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap:wrap;
+
+
+}
+
+  .product.explanation
+  {
+    width:50%;
+    height: 100%;
+    padding:30px;
+
+    
+
+    .title
+    {
+      font-size: $fontsizeheader;
+      font-family: $fontstyle1;
+    }
+    
+    .field
+    {
+      font-style: bold;
+      font-size:$fontsizehighlight;
+    }
+
+    .fecha{
+      font-style: italic;
+    }
+
+    .stock
+    {
+      color:green;
+    }
+  }
+
+
+
+.product.buttons
+{
+  width:100%;
+  padding-top:100px;
+
+  display:flex;
+  justify-content: flex-start;
+  
+
+  .add
+  {
+    width:auto;
+    box-shadow:inset 0px 1px 0px 0px #a4e271;
+    background:linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+    background-color:#89c403;
+    border-radius:6px;
+    border:1px solid #74b807;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:14px;
+    font-weight:bold;
+    padding:24px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #528009;
+  }
+}
+
+.product.info{
+  width:100%;
+  height:80vh;
+  border: $textcolor 5px solid ;
+  border-radius: 25px;
+  margin: 20px;
+  padding: 10px;
+
+  .list-head{
+    font-size: $fontsizeheader;
+    font-family: $fontstyle1;
+  }
+ .title
+    {
+      font-size: $fontsizeheader;
+      font-family: $fontstyle1;
+    }
+  .extra-img
+  {
+    width:100%;
+    height:auto;
+    display:flex;
+    justify-content: center;
+    background-color: $bgcolor3;
+
+   
+
+    figure{
+      width:300px;
+      text-align: center;
+    }
+  }
+}
+
+.section-bar
+{
+
+
+  grid-area: highlights;
+
+  width:100%;
+  background-color: $bgcolor2;
+  margin:auto;
+  padding-top:20px;
+  padding-bottom: 20px;
+
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+
+  .section-button
+  {
+    flex-grow: 1;
+    color:$textcolor;
+    text-align: center;
+  }
+
+  .section-button:hover
+  {
+    color:$bgcolor;
+  }
+}
+
+.rebajas-header
+{
+    grid-area: headerrebajas;
+    text-align: center;
+    color: $bgcolor;
+    font-family: 'Sigmar One';
+    font-size: $fontsizeheader2; 
+    background-color: blue;
+    width: 100%;
+    height:100%;
+}
+
+.estrenos-header
+{
+    grid-area: headerentrenos;
+    text-align: center;
+    color: $bgcolor;
+    font-family: 'Sigmar One';
+    font-size: $fontsizeheader2; 
+    background-color: blue;
+    width: 100%;
+    height:100%;
+}
+
+
+.main.footer
+{
+    grid-area: foot;
+    background-color: #000000;
+    color:lightblue;
+
+    p{
+        margin-left: 50px;
+    }
+}
+
+.product.footer
+{
+    grid-area: footp;
+    background-color: #000000;
+    color:lightblue;
+
+    p{
+        margin-left: 50px;
+    }
+}
+
+
+//scrollbar
+#scrollbar::-webkit-scrollbar {
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+#scrollbar::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#scrollbar::-webkit-scrollbar-thumb {
+	background-color: #000000;
+	border: 2px solid #555555;
+}
+
+
+//scroll snap
+
+.product.preview {
+
+  display: flex;
+  max-width:40% ;
+  height:100%;
+
+  overflow-y: hidden;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+
+  border-style: inset;
+
+  margin:20px;
+}
+
+.rebajas.preview {
+
+    grid-area: rebajas;
+
+    display: flex;
+    min-width:100vh ;
+    height:100%;
+
+
+
+  
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+    border-style: inset;
+}
+
+.estrenos.preview {
+
+    grid-area: estrenos;
+
+    display: flex;
+    min-width:100vh ;
+    height:100%;
+  
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+    border-style: inset;
+}
+
+.preview.child {
+
+    min-width: 100%; 
+    scroll-snap-align: start;
+    text-align: center;
+    vertical-align: middle;
+
+    img
+    {
+        max-height: 50%;
+        max-width: 60%;
+        
+        vertical-align: middle;
+    }
+
+}
+
+.product.child {
+
+  min-width: 100%; 
+  scroll-snap-align: start;
+  text-align: center;
+  vertical-align: middle;
+
+  img
+  {
+      max-height: 50%;
+      max-width: 60%;
+      
+      vertical-align: middle;
+  }
+
+}
+
+#part1,#part2,#part3{
+    background-color: white;
+
+    max-height:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: baseline;
+   
+
+    .imagen.rebaja
+    {
+        flex-grow: 1;
+       
+
+        figcaption
+        {
+            font-family: 'Sigmar One';
+            font-size: $fontsizehighlight; 
+            text-align: center;
+
+            img
+            {
+                min-height: 100%;
+                
+                vertical-align: middle;
+            }
+        }
+    }
+
+
+}
+
+
+//grid mosaico
+
+.mosaic-central{
+  grid-area: body;
+
+  height: 200vh;
+ 
+
+  display: grid;
+  grid-template-rows: 20% 20% 20% 20% 20% ;
+  grid-template-columns: 25% 25% 25% 25%;
+  
+  background-color: $bgcolor3;
+  
+}
+
+.mosaic-item{
+  background-color: $bgcolor2;
+  color: #fff;
+  padding:10px;
+  margin:10px;
+  border: $textcolor solid 5px;
+  border-radius: 25px;
+  justify-content: center;
+align-content: center;
+
+figure{
+  text-align: center;
+  vertical-align: middle;
+  
+  max-height: 200px;
+  img{
+    vertical-align: middle;
+    width: 200px;
+    height: 95%;
+  }
+}
+  
+}
+
+
+
+
+
+
